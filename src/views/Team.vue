@@ -1,6 +1,6 @@
 <template>
   <div class="team">
-    <h1 class="subheading grey--text">Team</h1>
+    <h1 class="subheading grey--text">Members</h1>
 
     <v-container class="my-5">
 
@@ -36,11 +36,11 @@ export default {
   data() {
     return {
       team: [
-        { name: 'The Net Ninja', role: 'Web developer', avatar: '/avatar-1.png' },
-        { name: 'Ryu', role: 'Graphic designer', avatar: '/avatar-2.png' },
-        { name: 'Chun Li', role: 'Web developer', avatar: '/avatar-3.png' },
-        { name: 'Gouken', role: 'Social media maverick', avatar: '/avatar-4.png' },
-        { name: 'Yoshi', role: 'Sales guru', avatar: '/avatar-5.png'}
+        { name: 'Eyad', role: 'Web developer', avatar: '/Eyad.jpg' },
+        { name: 'Hammad', role: 'Graphic designer', avatar: '/user.jpg' },
+        { name: 'Eyad', role: 'Web developer', avatar: '/Eyad.jpg' },
+        { name: 'Hammad', role: 'Social media specailist', avatar: '/user.jpg' },
+        { name: 'Eyad', role: 'Sales man', avatar: '/Eyad.jpg'}
 
       ]
     }

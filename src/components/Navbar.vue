@@ -2,15 +2,15 @@
   <nav>
 
     <v-snackbar v-model="snackbar" :timeout="4000" top color="success">
-      <span>Awesome! You added a new project.</span>
+      <span>Awesome! You added a new Services.</span>
       <v-btn color="white" flat @click="snackbar = false">Close</v-btn>
     </v-snackbar>
 
     <v-toolbar flat app>
       <v-toolbar-side-icon @click="drawer = !drawer" class="grey--text"></v-toolbar-side-icon>
       <v-toolbar-title class="text-uppercase grey--text">
-        <span class="font-weight-light">Todo</span>
-        <span>Ninja</span>
+        <span class="font-weight-light">Tabadul</span>
+        <span>SA</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
 
@@ -37,9 +37,9 @@
       <v-layout column align-center>
         <v-flex class="mt-5">
           <v-avatar size="100">
-            <img class="text-lg-center" src="/avatar-1.png">
+            <img class="text-lg-center" src="/user.jpg">
           </v-avatar>
-          <p class="white--text subheading mt-1">The Net Ninja</p>
+          <p class="white--text subheading mt-1">Mo Hammad</p>
         </v-flex>
         <v-flex class="mt-4 mb-3">
           <Popup @projectAdded="snackbar = true" />
@@ -70,8 +70,8 @@ export default {
       drawer: false,
       links: [
         { icon: 'dashboard', text: 'Dashboard', route: '/' },
-        { icon: 'folder', text: 'My Projects', route: '/projects' },
-        { icon: 'person', text: 'Team', route: '/team' },
+        { icon: 'folder', text: 'My Services', route: '/projects' },
+        { icon: 'person', text: 'Members', route: '/team' },
       ],
       snackbar: false
     }

@@ -8,9 +8,9 @@
         <v-tooltip top>
           <v-btn small flat color="grey" @click="sortBy('title')" slot="activator">
             <v-icon small left>folder</v-icon>
-            <span class="caption text-lowercase">By project name</span>
+            <span class="caption text-lowercase">By Service name</span>
           </v-btn>
-          <span>Sort by project name</span>
+          <span>Sort by Service name</span>
         </v-tooltip>
         <v-tooltip top>
           <v-btn small flat color="grey" @click="sortBy('person')" slot="activator">
@@ -23,9 +23,13 @@
       
       <v-card flat v-for="project in projects" :key="project.title">
         <v-layout row wrap :class="`pa-3 project ${project.status}`">
-          <v-flex xs12 md6>
-            <div class="caption grey--text">Project title</div>
+          <v-flex xs12 md4>
+            <div class="caption grey--text">Service Name</div>
             <div>{{ project.title }}</div>
+          </v-flex>
+          <v-flex xs6 sm4 md2>
+            <div class="caption grey--text">Version</div>
+            <div>{{ project.version }}</div>
           </v-flex>
           <v-flex xs6 sm4 md2>
             <div class="caption grey--text">Person</div>

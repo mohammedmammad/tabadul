@@ -1,13 +1,14 @@
 <template>
   <v-dialog max-width="600px" v-model="dialog">
-    <v-btn flat slot="activator" class="success">Add New Project</v-btn>
+    <v-btn flat slot="activator" class="success">Add New Services</v-btn>
     <v-card>
       <v-card-title>
-        <h2>Add a New Project</h2>
+        <h2>Add a New Services</h2>
       </v-card-title>
       <v-card-text>
         <v-form class="px-3" ref="form">
           <v-text-field v-model="title" label="Title" prepend-icon="folder" :rules="inputRules"></v-text-field>
+          <v-text-field v-model="version" label="Version" prepend-icon="folder" :rules="inputRules"></v-text-field>
           <v-textarea v-model="content" label="Information" prepend-icon="edit" :rules="inputRules"></v-textarea>
 
           <v-menu v-model="menu" :close-on-content-click="false">
@@ -19,7 +20,7 @@
 
           <v-spacer></v-spacer>
 
-          <v-btn flat @click="submit" class="success mx-0 mt-3" :loading="loading">Add Project</v-btn>
+          <v-btn flat @click="submit" class="success mx-0 mt-3" :loading="loading">Add Service</v-btn>
         </v-form>
       </v-card-text>
     </v-card>
@@ -35,6 +36,7 @@ export default {
     return {
       title: '',
       content: '',
+      version: '' ,
       due: null,
       menu: false,
       inputRules: [
@@ -51,9 +53,10 @@ export default {
         this.loading = true
         const project = { 
           title: this.title,
+          version: this.version ,
           content: this.content,
           due: format(this.due, 'Do MMM YYYY'),
-          person: 'The Net Ninja',
+          person: 'Hammad',
           status: 'ongoing'
         }
         db.collection('projects').add(project).then(() => {
